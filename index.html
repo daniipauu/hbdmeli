@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+          <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/6794/6794738.png" type="image/svg+xml">
+
+          <title>Happy Birthday Meli! 🎉🌸</title>
+
+    <title>Für dich 🌸</title>
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+
+            min-height: 100vh;
+
+            background:
+                linear-gradient(
+                    rgba(255, 245, 249, 0.75),
+                    rgba(255, 238, 245, 0.85)
+                ),
+                url("HIER_DEIN_BILD_LINK");
+
+            background-size: cover;
+            background-position: center;
+
+            font-family:
+                "Segoe UI",
+                Arial,
+                sans-serif;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            overflow: hidden;
+
+            color: #444;
+        }
+
+
+        /* TARJETA */
+
+        .card {
+
+            width: 90%;
+            max-width: 500px;
+
+            background: rgba(255,255,255,0.94);
+
+            padding: 40px 30px;
+
+            border-radius: 25px;
+
+            text-align: center;
+
+            box-shadow:
+                0 10px 35px rgba(0,0,0,0.12);
+
+            position: relative;
+
+            z-index: 10;
+
+            animation: aparecer 1s ease;
+        }
+
+
+        /* FLORES DECORATIVAS */
+
+        .decoracion {
+
+            font-size: 35px;
+
+            margin-bottom: 15px;
+        }
+
+
+        h1 {
+
+            font-size: 28px;
+
+            color: #d85c91;
+
+            margin-bottom: 18px;
+        }
+
+
+        p {
+
+            font-size: 17px;
+
+            line-height: 1.7;
+
+            color: #666;
+
+        }
+
+
+        /* BOTONES */
+
+        .buttons {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 15px;
+
+            margin-top: 30px;
+        }
+
+
+        button {
+
+            padding: 13px 30px;
+
+            border: none;
+
+            border-radius: 30px;
+
+            font-size: 16px;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+
+            font-weight: 500;
+        }
+
+
+        .yes {
+
+            background: #e88ab2;
+
+            color: white;
+
+        }
+
+
+        .no {
+
+            background: #eeeeee;
+
+            color: #666;
+
+        }
+
+
+        button:hover {
+
+            transform: translateY(-3px);
+
+        }
+
+
+        .yes:hover {
+
+            background: #dc709f;
+
+        }
+
+
+        .no:hover {
+
+            background: #dddddd;
+
+        }
+
+
+        /* MENSAJE */
+
+        #mensaje {
+
+            display: none;
+
+            margin-top: 25px;
+
+            animation: aparecer 0.8s ease;
+
+        }
+
+
+        .mensaje-texto {
+
+            background: #fff5f9;
+
+            border-radius: 18px;
+
+            padding: 20px;
+
+            margin-top: 20px;
+
+        }
+
+
+        /* BOTON CANVA */
+
+        .canva-button {
+
+            display: none;
+
+            margin-top: 25px;
+
+        }
+
+
+        .canva-button a {
+
+            display: inline-block;
+
+            background: #e77da8;
+
+            color: white;
+
+            text-decoration: none;
+
+            padding: 14px 30px;
+
+            border-radius: 30px;
+
+            font-size: 16px;
+
+            box-shadow:
+                0 5px 15px rgba(216,92,145,0.25);
+
+            transition: 0.3s;
+
+        }
+
+
+        .canva-button a:hover {
+
+            background: #d96698;
+
+            transform: translateY(-3px);
+
+        }
+
+
+        /* FLORES QUE CAEN */
+
+        .flor {
+
+            position: fixed;
+
+            top: -50px;
+
+            z-index: 1;
+
+            pointer-events: none;
+
+            animation: caer linear forwards;
+
+        }
+
+
+        @keyframes caer {
+
+            0% {
+
+                transform:
+                    translateY(-50px)
+                    rotate(0deg);
+
+                opacity: 0;
+
+            }
+
+
+            10% {
+
+                opacity: 1;
+
+            }
+
+
+            90% {
+
+                opacity: 1;
+
+            }
+
+
+            100% {
+
+                transform:
+                    translateY(110vh)
+                    rotate(360deg);
+
+                opacity: 0;
+
+            }
+
+        }
+
+
+        @keyframes aparecer {
+
+            from {
+
+                opacity: 0;
+
+                transform: translateY(20px);
+
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform: translateY(0);
+
+            }
+
+        }
+
+
+        /* CELULAR */
+
+        @media (max-width: 600px) {
+
+            .card {
+
+                padding: 32px 22px;
+
+            }
+
+
+            h1 {
+
+                font-size: 24px;
+
+            }
+
+
+            p {
+
+                font-size: 16px;
+
+            }
+
+
+            .buttons {
+
+                gap: 10px;
+
+            }
+
+
+            button {
+
+                padding: 12px 25px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <div class="card">
+
+        <div class="decoracion">
+            🌸 🌷 🌸
+        </div>
+
+
+        <!-- PREGUNTA -->
+
+        <div id="pregunta">
+
+            <h1>
+               We have something special for you... 💕
+            </h1>
+
+
+            <p>
+                Are you ready for a little surprise?
+            </p>
+
+
+            <div class="buttons">
+
+                <button
+                    class="yes"
+                    onclick="antwortJa()">
+
+                    Ja 💗
+
+                </button>
+
+
+                <button
+                    class="no"
+                    onclick="antwortNein()">
+
+                    Nei 🙈
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- MENSAJE -->
+
+        <div id="mensaje">
+
+            <div class="decoracion">
+                🌷 💕 🌸
+            </div>
+
+
+            <h1>
+                Für dich 💖
+            </h1>
+
+
+            <div class="mensaje-texto">
+
+                <p id="text">
+
+                </p>
+
+            </div>
+
+
+            <!-- CANVA -->
+
+            <div
+                class="canva-button"
+                id="canva">
+
+                <a
+                    href="https://canva.link/jm28ja7c16w7er5"
+                    target="_blank">
+
+                    🌸 Open here 🌸
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+
+        function antwortJa() {
+
+            document.getElementById("pregunta").style.display = "none";
+
+            document.getElementById("mensaje").style.display = "block";
+
+            document.getElementById("text").innerHTML = `
+
+                We knew you would say <strong>Yes</strong>. 😊🌸
+
+                <br><br>
+
+                We hope you have a wonderful day
+                and you cherish every moment.
+
+        
+                <br><br>
+                Happy Birthday! Dear Meli 🎉🎂
+                 <br><br>
+
+                Something super special is waiting for you... 💕
+            
+            `;
+
+            document.getElementById("canva").style.display = "block";
+
+        }
+
+
+
+        function antwortNein() {
+
+            document.getElementById("pregunta").style.display = "none";
+
+            document.getElementById("mensaje").style.display = "block";
+
+            document.getElementById("text").innerHTML = `
+
+                Okay... but are you sure? 😂
+
+                <br><br>
+
+                Because hey it's your birthday,
+                let's go through it one more time. 😌🌸
+
+                <br><br>
+
+                Maybe you are curious though. 😉
+
+            `;
+
+            document.getElementById("canva").style.display = "block";
+
+        }
+
+
+
+        /* FLORES ERZEUGEN */
+
+        function neueBlume() {
+
+            const blume = document.createElement("div");
+
+            blume.classList.add("flor");
+
+
+            const blumen = [
+
+                "🌸",
+                "🌷",
+                "🌺",
+                "🌼",
+                "🌹",
+                "💐",
+                "🤍",
+                "🍂",
+                "🍁",
+                "🧸",
+                "💖",
+                "💟",
+                "💌"
+
+
+            ];
+
+
+            blume.innerHTML =
+                blumen[
+                    Math.floor(
+                        Math.random() * blumen.length
+                    )
+                ];
+
+
+            blume.style.left =
+                Math.random() * 100 + "vw";
+
+
+            blume.style.fontSize =
+                (15 + Math.random() * 20) + "px";
+
+
+            blume.style.animationDuration =
+                (5 + Math.random() * 6) + "s";
+
+
+            document.body.appendChild(blume);
+
+
+            setTimeout(() => {
+
+                blume.remove();
+
+            }, 11000);
+
+        }
+
+
+        setInterval(neueBlume, 500);
+
+
+
+    </script>
+
+
+</body>
+
+</html>
